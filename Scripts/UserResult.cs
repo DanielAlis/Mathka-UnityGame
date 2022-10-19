@@ -59,7 +59,8 @@ public class UserResult : MonoBehaviour
 
     public void CheckUserResult()
     {
-        if(text_user_result.text.Length > 0 && text_user_result.text[0] != '+' && text_user_result.text[0] != '-'
+        if((text_user_result.text.Contains("+") || text_user_result.text.Contains("-"))
+             && text_user_result.text[0] != '+' && text_user_result.text[0] != '-'
         && text_user_result.text[text_user_result.text.Length-1] != '+' && 
         text_user_result.text[text_user_result.text.Length-1] != '-')
         {

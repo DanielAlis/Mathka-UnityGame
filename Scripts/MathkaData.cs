@@ -90,7 +90,7 @@ public class MathkaData : MonoBehaviour
                 if(answer >=0 && !results.Contains(answer))
                 {
                     results.Add(answer);
-                    return 1;
+                    return 1; 
                 }
             }
 
