@@ -138,20 +138,28 @@ public class MathkaData : MonoBehaviour
         }
     };
 
-    public Dictionary<string,MathkaBoardData> mathka_game = new Dictionary<string,MathkaBoardData>();
+    public Dictionary<string,MathkaBoardData> mathka_game;
 
     void Awake(){
         if(instance == null)
         {
+            Debug.LogError("new instance");
             instance = this;
+            initGame();
         }
         else{
+            Debug.LogError("reusing existing instance");
             Destroy(this);
         }
     }
 
     void Start()
     {
+        
+    }
+
+    public void initGame() {
+        mathka_game = new Dictionary<string,MathkaBoardData>();
         mathka_game.Add("Easy",MathkaEasyData.getData());
         mathka_game.Add("Medium",MathkaMediumData.getData());
         mathka_game.Add("Hard",MathkaHardData.getData());

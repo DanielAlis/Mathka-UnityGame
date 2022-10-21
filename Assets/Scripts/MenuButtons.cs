@@ -10,28 +10,24 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-   public void LoadEasyGame(string name)
+   public void setEasyGame()
     {
         GameSettings.instance.SetGameMode(GameSettings.EGameMode.EASY);
-        SceneManager.LoadScene(name);
     }
 
-    public void LoadMediumGame(string name)
+    public void setMediumGame()
     {
         GameSettings.instance.SetGameMode(GameSettings.EGameMode.MEDIUM);
-        SceneManager.LoadScene(name);
     }
 
-    public void LoadHardGame(string name)
+    public void setHardGame()
     {
         GameSettings.instance.SetGameMode(GameSettings.EGameMode.HARD);
-        SceneManager.LoadScene(name);
     }
 
-    public void LoadVeryHardGame(string name)
+    public void setVeryHardGame()
     {
         GameSettings.instance.SetGameMode(GameSettings.EGameMode.VERYHARD);
-        SceneManager.LoadScene(name);
     }
 
     public void ActivateObject(GameObject obj)
@@ -46,5 +42,10 @@ public class MenuButtons : MonoBehaviour
 
     public void SetPaused(bool paused){
         GameSettings.instance.SetPaused(paused);
+    }
+
+    
+    public void loadGameScene() {
+        LoadScene("GameScene");
     }
 }

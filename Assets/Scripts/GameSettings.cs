@@ -16,7 +16,6 @@ public class GameSettings : MonoBehaviour
     public static GameSettings instance;
 
     private void Awake(){
-        Debug.Log("awake game settings");
         paused = false;
         if (instance == null)
         {
