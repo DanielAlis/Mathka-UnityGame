@@ -28,13 +28,14 @@ public class Clock : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("start clock");
         stop_clock = false;
     }
 
 
     void Update()
     {
-      if (GameSettings.instance.GetPaused() == false && stop_clock == false)
+      if (GameSettings.instance != null && GameSettings.instance.GetPaused() == false && stop_clock == false)
       {
         delta_time += Time.deltaTime;
         TimeSpan span = TimeSpan.FromSeconds(delta_time);
